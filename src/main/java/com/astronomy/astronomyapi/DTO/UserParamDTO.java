@@ -5,15 +5,18 @@ public class UserParamDTO {
     private String latitude;
     private String tz;
     private String birthday;
+    private String transitday;
 
     // 构造方法
-    public UserParamDTO() {}
+    public UserParamDTO() {
+    }
 
-    public UserParamDTO(String longitude, String latitude, String tz, String birthday) {
+    public UserParamDTO(String longitude, String latitude, String tz, String birthday, String transitday) {
         this.longitude = longitude;
         this.latitude = latitude;
         this.tz = tz;
         this.birthday = birthday;
+        this.transitday = transitday;
     }
 
     // Getter 和 Setter
@@ -47,5 +50,13 @@ public class UserParamDTO {
 
     public void setBirthday(String birthday) {
         this.birthday = birthday;
+    }
+
+    public String getTransitday() {
+        return transitday;
+    }
+
+    public void setTransitday(String transitday) {
+        this.transitday = transitday;
     }
 }

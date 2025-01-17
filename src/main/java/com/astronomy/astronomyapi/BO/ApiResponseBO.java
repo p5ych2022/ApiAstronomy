@@ -7,7 +7,6 @@ public class ApiResponseBO {
     private Map<String, Object> data;
 
     // Getter 和 Setter
-  
 
     public Map<String, Object> getData() {
         return data;
