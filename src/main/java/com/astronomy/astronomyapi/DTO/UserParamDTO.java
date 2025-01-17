@@ -1,30 +1,22 @@
 package com.astronomy.astronomyapi.DTO;
 
-public class ApiRequestDTO {
-    private String birthday; // 格式为 yyyy-MM-dd HH:mm
-    private String longitude; // 经度
-    private String latitude;  // 纬度
-    private String tz;        // 时区
-    // 构造方法
-    public ApiRequestDTO() {
-    }
+public class UserParamDTO {
+    private String longitude;
+    private String latitude;
+    private String tz;
+    private String birthday;
 
-    public ApiRequestDTO(String birthday, String longitude, String latitude) {
-        this.birthday = birthday;
+    // 构造方法
+    public UserParamDTO() {}
+
+    public UserParamDTO(String longitude, String latitude, String tz, String birthday) {
         this.longitude = longitude;
         this.latitude = latitude;
         this.tz = tz;
-    }
-
-    // Getter 和 Setter
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
+    // Getter 和 Setter
     public String getLongitude() {
         return longitude;
     }
@@ -41,11 +33,19 @@ public class ApiRequestDTO {
         this.latitude = latitude;
     }
 
+    public String getTz() {
+        return tz;
+    }
+
     public void setTz(String tz) {
         this.tz = tz;
     }
 
-    public String getTz() {
-        return tz;
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 }
